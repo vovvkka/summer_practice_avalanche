@@ -1,0 +1,51 @@
+.filter-button {
+    width: 139px;
+    height: 41px;
+    border-radius: 5px;
+    opacity: 1;
+
+    /* Стили для кнопки */
+    background-color: #2c2c2c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+
+    /* Переходы для плавной анимации */
+    transition: all 0.2s ease;
+
+    /* Центрирование текста */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter-button:hover {
+    background-color: #3c3c3c;
+    transform: translateY(-1px);
+}
+
+.filter-button:active {
+    background-color: #1c1c1c;
+    transform: translateY(0);
+}
+
+.filter-button:disabled {
+    background-color: #666666;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.filter-button:disabled:hover {
+    background-color: #666666;
+    transform: none;
+}
+
+/* Фокус для доступности */
+.filter-button:focus {
+    outline: 2px solid #4a9eff;
+    outline-offset: 2px;
+}
