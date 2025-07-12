@@ -1,0 +1,8 @@
+.logo-icon {
+  width: 320px;
+  height: auto;
+  transition: filter 0.3s, opacity 0.3s;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
