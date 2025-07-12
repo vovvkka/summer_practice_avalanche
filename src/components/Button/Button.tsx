@@ -1,26 +1,31 @@
-import React from 'react';
-import './Button.css';
+import "./Button.css";
 
-interface FilterButtonProps {
+enum ButtonTheme {
+    DARK = 'dark',
+    LIGHT = 'light',
+    GRAY = 'gray',
+    CLEAR = 'clear'
+}
+
+interface ButtonProps {
+    theme: ButtonTheme;
+    children: React.ReactNode;
     onClick?: () => void;
     disabled?: boolean;
     className?: string;
 }
 
-const FilterButton: React.FC<FilterButtonProps> = ({
-                                                       onClick,
-                                                       disabled = false,
-                                                       className = ''
-                                                   }) => {
+const Button: React.FC<ButtonProps> = ({theme, children, onClick, disabled = false, className = ''}) => {
     return (
         <button
-            className={`filter-button ${className}`}
+            className={`btn btn--${theme} ${className}`}
             onClick={onClick}
             disabled={disabled}
         >
-            фильтры
+            {children}
         </button>
     );
 };
 
-export default FilterButton;
+
+export { Button, ButtonTheme };
